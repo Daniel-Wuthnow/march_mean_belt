@@ -1,0 +1,31 @@
+<h3>Know a pet needing a shelter?</h3>
+<form
+	(submit)="onSubmit($event)"
+	>
+	<label>Pet Name</label>
+	<input
+	type="text"
+	name="name"
+	required
+	[(ngModel)]="pet.name"
+	>
+	<p style="color: red">{{errorName}}</p>
+	<label>Pet Type</label>
+	<input
+	type="text"
+	name="type"
+	required
+	[(ngModel)]="pet.type"
+	>
+	<p style="color: red">{{errorType}}</p>
+	<label>Description</label>
+	<input
+	type="text"
+	name="description"
+	required
+	[(ngModel)]="pet.description"
+	>
+	<p style="color: red">{{errorDesc}}</p>
+	<button>Add Pet</button>
+	<button [routerLink]="['/']">Cancel</button>
+</form>

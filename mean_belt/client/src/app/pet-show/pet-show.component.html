@@ -1,0 +1,8 @@
+<h3>Details about {{pet.name}}</h3>
+<h3>Pet Type: {{pet.type}}</h3>
+<h3>Pet Description: {{pet.description}}</h3>
+<h3>Skill: </h3>
+<h3>Likes: {{pet.likes.length}}</h3>
+<button (click)="petLike(pet)">Like this pet</button>
+<button (click)="petAdopt(pet._id)">Adopt this pet!</button>
+<a [routerLink]="['/']">Home</a>
